@@ -1,6 +1,6 @@
 <?php
 
-namespace CblinkService\LowCodeSdk\Api;
+namespace CblinkService\LowCodeSdk\Product;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
@@ -9,7 +9,7 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $pimple)
     {
-        $pimple['api'] = function($pimple){
+        $pimple['product'] = function($pimple){
             return new Client($pimple);
         };
     }
