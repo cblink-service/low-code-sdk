@@ -94,6 +94,18 @@ class Client extends BaseApi
     }
 
     /**
+     * 保存线上配置
+     *
+     * @param array $query
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function createDecoration(array $query = [])
+    {
+        return $this->httpPost('/api/app/decoration', $query);
+    }
+
+    /**
      * 获取跳转链接
      *
      * @return string
