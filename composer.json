@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CblinkService\\LowCodeSdk\\": "src"
+            "Cblink\\Service\\LowCodeSdk\\": "src"
         }
     },
     "require-dev": {

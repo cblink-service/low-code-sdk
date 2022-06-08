@@ -1,6 +1,6 @@
 <?php
 
-namespace CblinkService\LowCodeSdk\Kernel;
+namespace Cblink\Service\LowCodeSdk\Kernel;
 
 use Cblink\Service\Foundation\AccessToken;
 use Pimple\Container;

@@ -1,6 +1,6 @@
 <?php
 
-namespace CblinkService\LowCodeSdk\Kernel;
+namespace Cblink\Service\LowCodeSdk\Kernel;
 
 class BaseApi extends \Cblink\Service\Foundation\BaseApi
 {

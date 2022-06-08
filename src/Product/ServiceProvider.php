@@ -1,6 +1,6 @@
 <?php
 
-namespace CblinkService\LowCodeSdk\Product;
+namespace Cblink\Service\LowCodeSdk\Product;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

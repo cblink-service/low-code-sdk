@@ -1,6 +1,6 @@
 <?php
 
-namespace CblinkService\LowCodeSdk;
+namespace Cblink\Service\LowCodeSdk;
 
 use Cblink\Service\Foundation\Container;
 use Hyperf\Utils\Collection;

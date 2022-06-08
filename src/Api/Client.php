@@ -1,8 +1,8 @@
 <?php
 
-namespace CblinkService\LowCodeSdk\Api;
+namespace Cblink\Service\LowCodeSdk\Api;
 
-use CblinkService\LowCodeSdk\Kernel\BaseApi;
+use Cblink\Service\LowCodeSdk\Kernel\BaseApi;
 
 class Client extends BaseApi
 {
