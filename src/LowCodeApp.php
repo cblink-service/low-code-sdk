@@ -15,7 +15,7 @@ use Hyperf\Utils\Collection;
  */
 class LowCodeApp extends Container
 {
-    protected $providers = [
+    protected array $providers = [
         Kernel\ServiceProvider::class,
         Api\ServiceProvider::class,
         Product\ServiceProvider::class,
