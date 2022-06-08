@@ -101,7 +101,7 @@ class Client extends BaseApi
     public function getRedirectUrl()
     {
         return sprintf('%s/%s',
-            $this->app->config->get('app_url'),
+            rtrim($this->app->config->get('app_url'), '/'),
             'home',
         );
     }
