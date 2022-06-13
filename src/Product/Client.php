@@ -15,7 +15,7 @@ class Client extends BaseApi
      */
     public function getCategoryList(array $query=[])
     {
-        return $this->httpGet('/api/app/product/category-list', $query);
+        return $this->httpGet('/api/product/category-list', $query);
     }
     /**
      * 商品列
@@ -26,7 +26,7 @@ class Client extends BaseApi
      */
     public function getList(array $query=[])
     {
-        return $this->httpGet('/api/app/product', $query);
+        return $this->httpGet('/api/product', $query);
     }
 
     /**
@@ -38,7 +38,7 @@ class Client extends BaseApi
      */
     public function getSkuList(array $query=[])
     {
-        return $this->httpGet('/api/app/product/sku-list', $query);
+        return $this->httpGet('/api/product/sku-list', $query);
     }
 
 }

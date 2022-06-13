@@ -94,6 +94,19 @@ class Client extends BaseApi
     }
 
     /**
+     * 获取已上线的装修配置详情
+     *
+     * @param string $id
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function show(string $id)
+    {
+        return $this->httpGet(sprintf('/api/app/decoration/%s', $id));
+    }
+
+
+    /**
      * 保存线上配置
      *
      * @param array $query
