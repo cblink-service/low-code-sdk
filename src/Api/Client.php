@@ -100,9 +100,9 @@ class Client extends BaseApi
      * @return array|\Psr\Http\Message\ResponseInterface|string
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function show(string $id)
+    public function show(string $id, array $query=[])
     {
-        return $this->httpGet(sprintf('/api/app/decoration/%s', $id));
+        return $this->httpGet(sprintf('/api/app/decoration/%s', $id), $query);
     }
 
 
