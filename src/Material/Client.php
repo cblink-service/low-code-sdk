@@ -12,7 +12,7 @@ class Client extends BaseApi
      * @param array $query
      * @return mixed
      */
-    public function list(array $query=[])
+    public function list(array $query = [])
     {
         return $this->httpGet('/api/material', $query);
     }
@@ -34,7 +34,7 @@ class Client extends BaseApi
      * @param array $query
      * @return mixed
      */
-    public function create(array $query=[])
+    public function create(array $query = [])
     {
         return $this->httpPost('/api/material', $query);
     }
@@ -46,7 +46,7 @@ class Client extends BaseApi
      * @param array $query
      * @return mixed
      */
-    public function update(int $id, array $query=[])
+    public function update(int $id, array $query = [])
     {
         return $this->httpPut(sprintf('/api/material/%s', $id), $query);
     }
@@ -68,7 +68,7 @@ class Client extends BaseApi
      * @param array $query
      * @return mixed
      */
-    public function countByCategoryId(array $query)
+    public function countByCategoryId(array $query = [])
     {
         return $this->httpGet('/api/material/count', $query);
     }
@@ -79,7 +79,7 @@ class Client extends BaseApi
      * @param array $query
      * @return mixed
      */
-    public function categoryList(array $query=[])
+    public function categoryList(array $query = [])
     {
         return $this->httpGet('/api/material/category', $query);
     }
@@ -101,7 +101,7 @@ class Client extends BaseApi
      * @param array $query
      * @return mixed
      */
-    public function categoryCreate(array $query=[])
+    public function categoryCreate(array $query = [])
     {
         return $this->httpPost('/api/material/category', $query);
     }
@@ -113,7 +113,7 @@ class Client extends BaseApi
      * @param array $query
      * @return mixed
      */
-    public function categoryUpdate(int $id, array $query=[])
+    public function categoryUpdate(int $id, array $query = [])
     {
         return $this->httpPut(sprintf('/api/material/category/%s', $id), $query);
     }
