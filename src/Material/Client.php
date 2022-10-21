@@ -68,9 +68,9 @@ class Client extends BaseApi
      * @param array $query
      * @return mixed
      */
-    public function countByCategoryId()
+    public function countByCategoryId(array $query)
     {
-        return $this->httpGet('/api/material/count');
+        return $this->httpGet('/api/material/count', $query);
     }
 
     /**
