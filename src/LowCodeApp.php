@@ -12,6 +12,7 @@ use Hyperf\Utils\Collection;
  *
  * @property-read Api\Client $api       api接口
  * @property-read Product\Client $product       商品
+ * @property-read Material\Client $material     素材
  */
 class LowCodeApp extends Container
 {
@@ -19,5 +20,6 @@ class LowCodeApp extends Container
         Kernel\ServiceProvider::class,
         Api\ServiceProvider::class,
         Product\ServiceProvider::class,
+        Material\ServiceProvider::class,
     ];
 }
