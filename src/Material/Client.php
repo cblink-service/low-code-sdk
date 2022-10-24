@@ -92,7 +92,7 @@ class Client extends BaseApi
      */
     public function categoryShow(int $id)
     {
-        return $this->httpDelete(sprintf('/api/material/category/%s', $id));
+        return $this->httpGet(sprintf('/api/material/category/%s', $id));
     }
 
     /**
