@@ -23,9 +23,9 @@ class Client extends BaseApi
      * @param int $id
      * @return mixed
      */
-    public function show(int $id)
+    public function show(int $id, array $query = [])
     {
-        return $this->httpGet(sprintf('/api/material/%s', $id));
+        return $this->httpGet(sprintf('/api/material/%s', $id), $query);
     }
 
     /**
@@ -57,9 +57,9 @@ class Client extends BaseApi
      * @param int $id
      * @return mixed
      */
-    public function destroy(int $id)
+    public function destroy(int $id, array $query = [])
     {
-        return $this->httpDelete(sprintf('/api/material/%s', $id));
+        return $this->httpDelete(sprintf('/api/material/%s', $id), $query);
     }
 
     /**
@@ -90,9 +90,9 @@ class Client extends BaseApi
      * @param int $id
      * @return mixed
      */
-    public function categoryShow(int $id)
+    public function categoryShow(int $id, array $query = [])
     {
-        return $this->httpGet(sprintf('/api/material/category/%s', $id));
+        return $this->httpGet(sprintf('/api/material/category/%s', $id), $query);
     }
 
     /**
@@ -124,9 +124,9 @@ class Client extends BaseApi
      * @param int $id
      * @return mixed
      */
-    public function categoryDestroy(int $id)
+    public function categoryDestroy(int $id, array $query = [])
     {
-        return $this->httpDelete(sprintf('/api/material/category/%s', $id));
+        return $this->httpDelete(sprintf('/api/material/category/%s', $id), $query);
     }
 
 }
