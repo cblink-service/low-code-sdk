@@ -20,10 +20,10 @@ class Client extends BaseApi
     /**
      * 素材详情
      *
-     * @param int $id
+     * @param string $id
      * @return mixed
      */
-    public function show(int $id, array $query = [])
+    public function show(string $id, array $query = [])
     {
         return $this->httpGet(sprintf('/api/material/%s', $id), $query);
     }
@@ -42,11 +42,11 @@ class Client extends BaseApi
     /**
      * 素材编辑
      *
-     * @param int $id
+     * @param string $id
      * @param array $query
      * @return mixed
      */
-    public function update(int $id, array $query = [])
+    public function update(string $id, array $query = [])
     {
         return $this->httpPut(sprintf('/api/material/%s', $id), $query);
     }
@@ -54,10 +54,10 @@ class Client extends BaseApi
     /**
      * 素材删除
      *
-     * @param int $id
+     * @param string $id
      * @return mixed
      */
-    public function destroy(int $id, array $query = [])
+    public function destroy(string $id, array $query = [])
     {
         return $this->httpDelete(sprintf('/api/material/%s', $id), $query);
     }
