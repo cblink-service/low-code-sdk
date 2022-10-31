@@ -82,6 +82,58 @@ class Client extends BaseApi
     }
 
     /**
+     * 创建应用模板配置
+     *
+     * @param array $query
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function createAppTemplateConfig(array $query=[])
+    {
+        return $this->httpPost('/api/app/template/config', $query);
+    }
+
+    /**
+     * 更新应用模板配置
+     *
+     * @param       $id
+     * @param array $query
+     *
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function updateAppTemplateConfig($id, array $query=[])
+    {
+        return $this->httpPut(sprintf('/api/app/template/config/%s', $id), $query);
+    }
+
+    /**
+     * 获取应用模板配置列表
+     *
+     * @param array $query
+     *
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getAppTemplateConfigList(array $query=[])
+    {
+        return $this->httpGet('/api/app/template/config', $query);
+    }
+
+    /**
+     * 获取应用模板配置
+     *
+     * @param $id
+     *
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getAppTemplateConfig($id)
+    {
+        return $this->httpGet(sprintf('/api/app/template/config/%s', $id));
+    }
+
+    /**
      * 获取已上线的装修配置
      *
      * @param array $query
