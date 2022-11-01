@@ -134,6 +134,18 @@ class Client extends BaseApi
     }
 
     /**
+     * 删除应用模板配置
+     *
+     * @param $id
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function destroyAppTemplateConfig($id)
+    {
+        return $this->httpDelete(sprintf('/api/app/template/config/%s', $id));
+    }
+
+    /**
      * 获取已上线的装修配置
      *
      * @param array $query
