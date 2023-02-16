@@ -183,5 +183,114 @@ class Client extends BaseApi
         );
     }
 
+    /**
+     * 复制模板
+     *
+     * @param $id
+     * @param array $data
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function copyTemplate($id, array $data=[])
+    {
+        return $this->httpPost(sprintf('/api/app/template/%s/copy', $id), $data);
+    }
+    /**
+     * 使用模板
+     *
+     * @param $id
+     * @param array $data
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function useTemplate($id, array $data=[])
+    {
+        return $this->httpPost(sprintf('/api/app/template/%s/use', $id), $data);
+    }
+
+    /**
+     * 编辑模板状态
+     *
+     * @param $id
+     * @param array $data
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function updateStatusTemplate($id, array $data=[])
+    {
+        return $this->httpPut(sprintf('/api/app/template/%s/status', $id), $data);
+    }
+
+    /**
+     * 模板分类列表
+     *
+     * @param array $query
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getCategoryList(array $query)
+    {
+        return $this->httpGet('/api/app/template/category', $query);
+    }
+
+    /**
+     * 模板分类详情
+     *
+     * @param int $id
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getCategory(int $id)
+    {
+        return $this->httpGet(sprintf('/api/app/template/category/%s', $id));
+    }
+
+    /**
+     * 创建分类
+     *
+     * @param array $data
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function createCategory(array $data)
+    {
+        return $this->httpPost('/api/app/template/category');
+    }
+
+    /**
+     * 编辑分类
+     *
+     * @param array $data
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function updateCategory(int $id, array $data)
+    {
+        return $this->httpPut(sprintf('/api/app/template/category/%s', $id), $data);
+    }
+
+    /**
+     * 编辑分类状态
+     *
+     * @param int $id
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function updateCategoryStatus(int $id)
+    {
+        return $this->httpPut(sprintf('/api/app/template/category/%s/status', $id));
+    }
+
+    /**
+     * 删除分类
+     *
+     * @param int $id
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function deleteCategory(int $id)
+    {
+        return $this->httpDelete(sprintf('/api/app/template/category/%s', $id));
+    }
 
 }
