@@ -266,7 +266,7 @@ class Client extends BaseApi
      */
     public function createCategory(array $data)
     {
-        return $this->httpPost('/api/app/template/category');
+        return $this->httpPost('/api/app/template/category', $data);
     }
 
     /**
